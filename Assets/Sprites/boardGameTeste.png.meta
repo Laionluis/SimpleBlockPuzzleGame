@@ -1,0 +1,1668 @@
+fileFormatVersion: 2
+guid: dfb49a2ac061ff34e9fcab049f27e8c7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 226357257743875121
+    second: boardGameTeste_0
+  - first:
+      213: -803742581272404600
+    second: boardGameTeste_1
+  - first:
+      213: 19670354632341474
+    second: boardGameTeste_2
+  - first:
+      213: 4516321021771303225
+    second: boardGameTeste_3
+  - first:
+      213: -1062446742226487670
+    second: boardGameTeste_4
+  - first:
+      213: 6797070924101957286
+    second: boardGameTeste_5
+  - first:
+      213: -6024194351499415947
+    second: boardGameTeste_6
+  - first:
+      213: -9088051257288410345
+    second: boardGameTeste_7
+  - first:
+      213: -7462506074783470574
+    second: boardGameTeste_8
+  - first:
+      213: -6724826364409627504
+    second: boardGameTeste_9
+  - first:
+      213: -1414105985199414395
+    second: boardGameTeste_10
+  - first:
+      213: -1962750401536393196
+    second: boardGameTeste_11
+  - first:
+      213: 5970707619865814551
+    second: boardGameTeste_12
+  - first:
+      213: 8963512637735745125
+    second: boardGameTeste_13
+  - first:
+      213: -6344460261959392802
+    second: boardGameTeste_14
+  - first:
+      213: 3808791708526065741
+    second: boardGameTeste_15
+  - first:
+      213: 7349426243900973507
+    second: boardGameTeste_16
+  - first:
+      213: -962211155609505246
+    second: boardGameTeste_17
+  - first:
+      213: 7018687666027527162
+    second: boardGameTeste_18
+  - first:
+      213: 5920350550911626413
+    second: boardGameTeste_19
+  - first:
+      213: -8462750129908437684
+    second: boardGameTeste_20
+  - first:
+      213: 5529050410125009675
+    second: boardGameTeste_21
+  - first:
+      213: -5184310610154507315
+    second: boardGameTeste_22
+  - first:
+      213: 7699132670298566879
+    second: boardGameTeste_23
+  - first:
+      213: -7023775650914515616
+    second: boardGameTeste_24
+  - first:
+      213: 2738887870979790859
+    second: boardGameTeste_25
+  - first:
+      213: -4229665221456756102
+    second: boardGameTeste_26
+  - first:
+      213: -3296557800161697438
+    second: boardGameTeste_27
+  - first:
+      213: -4159327718803424621
+    second: boardGameTeste_28
+  - first:
+      213: 8937655145646266752
+    second: boardGameTeste_29
+  - first:
+      213: 4878336457094142255
+    second: boardGameTeste_30
+  - first:
+      213: -1458899290703991354
+    second: boardGameTeste_31
+  - first:
+      213: -795262274877807003
+    second: boardGameTeste_32
+  - first:
+      213: -3123813430251325530
+    second: boardGameTeste_33
+  - first:
+      213: 4833295612506967456
+    second: boardGameTeste_34
+  - first:
+      213: 4823264898905782028
+    second: boardGameTeste_35
+  - first:
+      213: -6715254192483184576
+    second: boardGameTeste_36
+  - first:
+      213: 4298625127280989869
+    second: boardGameTeste_37
+  - first:
+      213: -5795684896387810202
+    second: boardGameTeste_38
+  - first:
+      213: 3900251258398742446
+    second: boardGameTeste_39
+  - first:
+      213: -7763692747018852017
+    second: boardGameTeste_40
+  - first:
+      213: 7853412001827423574
+    second: boardGameTeste_41
+  - first:
+      213: -6572887066852925193
+    second: boardGameTeste_42
+  - first:
+      213: -7802338647691535663
+    second: boardGameTeste_43
+  - first:
+      213: -2965627589117917491
+    second: boardGameTeste_44
+  - first:
+      213: 755182250145395115
+    second: boardGameTeste_45
+  - first:
+      213: 5987340583015733007
+    second: boardGameTeste_46
+  - first:
+      213: -8660485965090835994
+    second: boardGameTeste_47
+  - first:
+      213: 6688790046529015718
+    second: boardGameTeste_48
+  - first:
+      213: 6861541998369958413
+    second: boardGameTeste_49
+  - first:
+      213: -7443502436883795900
+    second: boardGameTeste_50
+  - first:
+      213: -7590853195369224424
+    second: boardGameTeste_51
+  - first:
+      213: -5423685258257874612
+    second: boardGameTeste_52
+  - first:
+      213: -4857636861374386268
+    second: boardGameTeste_53
+  - first:
+      213: -4297412515570144764
+    second: boardGameTeste_54
+  - first:
+      213: 5112639688172536382
+    second: boardGameTeste_55
+  - first:
+      213: 994762842973092328
+    second: boardGameTeste_56
+  - first:
+      213: 1731996380165468456
+    second: boardGameTeste_57
+  - first:
+      213: -7091872271008058494
+    second: boardGameTeste_58
+  - first:
+      213: -4820371959950343540
+    second: boardGameTeste_59
+  - first:
+      213: -8318426745648221110
+    second: boardGameTeste_60
+  - first:
+      213: -4643792905549768947
+    second: boardGameTeste_61
+  - first:
+      213: 9049157804647737629
+    second: boardGameTeste_62
+  - first:
+      213: -4561008823893597157
+    second: boardGameTeste_63
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 34
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boardGameTeste_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cb7240abe242300800000000000000
+      internalID: 226357257743875121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d1768716888d4f0800000000000000
+      internalID: -803742581272404600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e777745512e54000800000000000000
+      internalID: 19670354632341474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939ce427a023dae30800000000000000
+      internalID: 4516321021771303225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86b1d8215e6141f0800000000000000
+      internalID: -1062446742226487670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_5
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6bb383efb045e50800000000000000
+      internalID: 6797070924101957286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_6
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e66f4a723c56ca0800000000000000
+      internalID: -6024194351499415947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_7
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 156
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b38c43881c0e180800000000000000
+      internalID: -9088051257288410345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c2656534adf6890800000000000000
+      internalID: -7462506074783470574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09cbe2d1d0e9ca2a0800000000000000
+      internalID: -6724826364409627504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_10
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5836f654916106ce0800000000000000
+      internalID: -1414105985199414395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4100bada8e8e2c4e0800000000000000
+      internalID: -1962750401536393196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_12
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716e1d332f63cd250800000000000000
+      internalID: 5970707619865814551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_13
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566b6f7d04bc46c70800000000000000
+      internalID: 8963512637735745125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_14
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed124529103f3f7a0800000000000000
+      internalID: -6344460261959392802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_15
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 134
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48362a01eb8bd430800000000000000
+      internalID: 3808791708526065741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1a6aada386ef560800000000000000
+      internalID: 7349426243900973507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_17
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2223afe4d0a85a2f0800000000000000
+      internalID: -962211155609505246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_18
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb7cf2ee33676160800000000000000
+      internalID: 7018687666027527162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_19
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac20ec657f492250800000000000000
+      internalID: 5920350550911626413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_20
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4daaeb28954e8a80800000000000000
+      internalID: -8462750129908437684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_21
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03aab8cd022bbc40800000000000000
+      internalID: 5529050410125009675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_22
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3b37cb7f0ad08b0800000000000000
+      internalID: -5184310610154507315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_23
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 112
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd030c33f50d8da60800000000000000
+      internalID: 7699132670298566879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065c3315249868e90800000000000000
+      internalID: -7023775650914515616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_25
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b085065e10c720620800000000000000
+      internalID: 2738887870979790859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_26
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a720f3c04e53d45c0800000000000000
+      internalID: -4229665221456756102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_27
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261a1db85264042d0800000000000000
+      internalID: -3296557800161697438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_28
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a39401a791746c0800000000000000
+      internalID: -4159327718803424621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_29
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0891031500ee80c70800000000000000
+      internalID: 8937655145646266752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_30
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f291fe3492553b340800000000000000
+      internalID: 4878336457094142255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_31
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 90
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cde48e13d2f0cbe0800000000000000
+      internalID: -1458899290703991354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_32
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566a3aaac29a6f4f0800000000000000
+      internalID: -795262274877807003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_33
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a776416c3cf5a4d0800000000000000
+      internalID: -3123813430251325530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_34
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad8eed60c0531340800000000000000
+      internalID: 4833295612506967456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_35
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07b3eceeddafe240800000000000000
+      internalID: 4823264898905782028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_36
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040569014ef9ec2a0800000000000000
+      internalID: -6715254192483184576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_37
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6d62637c8c7ab30800000000000000
+      internalID: 4298625127280989869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_38
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c35b82b47919fa0800000000000000
+      internalID: -5795684896387810202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_39
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 68
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea790a7ead9702630800000000000000
+      internalID: 3900251258398742446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_40
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f492aa49492d14490800000000000000
+      internalID: -7763692747018852017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65586b34b9cecfc60800000000000000
+      internalID: 7853412001827423574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_42
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0e87f890a68c4a0800000000000000
+      internalID: -6572887066852925193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_43
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da5b07a65688b390800000000000000
+      internalID: -7802338647691535663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_44
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc647869b69f7d6d0800000000000000
+      internalID: -2965627589117917491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_45
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1b8906142fa7a00800000000000000
+      internalID: 755182250145395115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_46
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07dee7b98e471350800000000000000
+      internalID: 5987340583015733007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_47
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1318466e5cfc780800000000000000
+      internalID: -8660485965090835994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_48
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afc78ccb1b53dc50800000000000000
+      internalID: 6688790046529015718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_49
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ae340f718193f50800000000000000
+      internalID: 6861541998369958413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_50
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44079c498fd53b890800000000000000
+      internalID: -7443502436883795900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_51
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 817e0e3ac3fd7a690800000000000000
+      internalID: -7590853195369224424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_52
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4144085ef23bb4b0800000000000000
+      internalID: -5423685258257874612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_53
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afafede205369cb0800000000000000
+      internalID: -4857636861374386268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_54
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40aaf14f5168c54c0800000000000000
+      internalID: -4297412515570144764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_55
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 24
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32861e55beb3f640800000000000000
+      internalID: 5112639688172536382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_56
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e93b23098b1ecd00800000000000000
+      internalID: 994762842973092328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_57
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82176000889490810800000000000000
+      internalID: 1731996380165468456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_58
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2833f1e6ebb949d90800000000000000
+      internalID: -7091872271008058494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_59
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8208e9ed399a1db0800000000000000
+      internalID: -4820371959950343540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_60
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44778f92f20f8c80800000000000000
+      internalID: -8318426745648221110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_61
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d071a3ec4feed8fb0800000000000000
+      internalID: -4643792905549768947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_62
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d196b7e2411159d70800000000000000
+      internalID: 9049157804647737629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boardGameTeste_63
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b146662d3aa04b0c0800000000000000
+      internalID: -4561008823893597157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
