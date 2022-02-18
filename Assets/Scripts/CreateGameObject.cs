@@ -31,7 +31,7 @@ public class CreateGameObject : MonoBehaviour
     {
         GameObject gameObject = new GameObject("ConcretePiece");
         gameObject.transform.position = new Vector3(4, -1.2f, 1);
-        gameObject.transform.localScale = new Vector3(2.65f, 2.65f, 1);
+        gameObject.transform.localScale = new Vector3(2.63f, 2.63f, 1);
         SpriteRenderer renderer = gameObject.AddComponent<SpriteRenderer>();
         renderer.sprite = sprite;
         gameObject.AddComponent<CanvasGroup>();
