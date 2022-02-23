@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,36 +7,62 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
-public class BlockCell : MonoBehaviour, IDropHandler
+public class BlockCell : Base, IDropHandler
 {
     public GameObject controller;
     private CreateGameObject createGameObject;
     public void OnDrop(PointerEventData eventData)
     {
-        if(eventData.pointerDrag != null)
-        {            
+        if (eventData.pointerDrag != null)
+        {
             Tilemap tilemap = this.GetComponentInChildren<Tilemap>();
-            Vector3Int cellPosition = tilemap.WorldToCell(eventData.pointerDrag.transform.position);
-
-            if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+            if (eventData.pointerDrag.tag != "Untagged")
             {
-                if (createGameObject != null && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
+                for (int i = 0; i < eventData.pointerDrag.transform.childCount; i++)
                 {
-                    createGameObject.CreateBlockPieces();
-                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
-                    controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] = eventData.pointerDrag;
-                }
-                else
-                {
-                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = new Vector3(4, -1.2f, 1);
-                }
+                    Vector3Int cellPosition = tilemap.WorldToCell(eventData.pointerDrag.transform.GetChild(i).transform.position);
+                    
+                    if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                    {
+                        if (createGameObject != null && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
+                        {
+                            GameObject objetoQueFicaNoTabuleiro = createGameObject.CreateBlockPiecesAux();
+                            objetoQueFicaNoTabuleiro.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;                            
+                            controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] = objetoQueFicaNoTabuleiro;                            
+                        }
+                        else
+                        {
+                            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                        }
+                    }
+                    else
+                    {
+                        eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                    }
+                }                   
             }
             else
             {
-                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = new Vector3(4, -1.2f, 1);
-            }
+                Vector3Int cellPosition = tilemap.WorldToCell(eventData.pointerDrag.transform.position);
 
-            
+                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                {
+                    if (createGameObject != null && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
+                    {
+                        createGameObject.CreateBlockPieces();
+                        eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
+                        controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] = eventData.pointerDrag;
+                    }
+                    else
+                    {
+                        eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                    }
+                }
+                else
+                {
+                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                }
+            }           
         }
     }
 

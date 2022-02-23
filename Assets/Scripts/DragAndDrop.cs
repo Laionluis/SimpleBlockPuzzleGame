@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
-public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     private CanvasGroup canvasGroup;
     private Grid grid;
@@ -15,41 +16,79 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     private CreateGameObject createGameObject;
     private Tilemap tilemap;
     public GameObject controller;
-
+    private Dictionary<int, Vector3Int> teste = new Dictionary<int, Vector3Int>();
+    private Dictionary<int, GameObject> contornos = new Dictionary<int, GameObject>();
     public void OnDrag(PointerEventData eventData) 
     {
         //Create a ray going from the camera through the mouse position
         Ray ray = Camera.main.ScreenPointToRay(eventData.position);
         //Calculate the distance between the Camera and the GameObject, and go this distance along the ray
-        Vector3 rayPoint = ray.GetPoint(Vector3.Distance(transform.position, Camera.main.transform.position));
+        Vector3 rayPoint = ray.GetPoint(Vector3.Distance(transform.position, Camera.main.transform.position)) + new Vector3(0, 1, 0);
         //Move the GameObject when you drag it
-        transform.position = rayPoint;       
-        
+        rayPoint.z = 50;
+        transform.position = rayPoint;
         if (tilemap != null && createGameObject != null)
         {
-            Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
-            Vector3 posicaoReal = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
-            GameObject auxContorno;
-            if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+            if (this.tag != "Untagged")
             {
-                if (cellPosition != dragCellPosicaoAtual)
+                for (int i = 0; i < this.gameObject.transform.childCount; i++)
                 {
-                    DestroyImmediate(contornoAtual);
-                    auxContorno = createGameObject.Create(posicaoReal);
+                    Vector3Int cellPosition = tilemap.WorldToCell(transform.GetChild(i).transform.position);
+                    Vector3 posicaoReal = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
                     
-                    //Debug.Log(cellPosition);
-                    contornoAtual = auxContorno;
-                }
+                    if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                    {
+                        var aux1 = teste.Where(x => x.Key == i).FirstOrDefault();
+                        if (aux1.Value != cellPosition)
+                        {
+                            teste.Remove(i);
+                            DestroyImmediate(contornos.Where(x => x.Key == i).Select(x => x.Value).LastOrDefault());
+                            contornos.Remove(i);
+                            GameObject auxContorno = createGameObject.Create(posicaoReal, "");
+                            contornos.Add(i,auxContorno);
+                            teste.Add(i, cellPosition);
+                        }
+                    }
+                    else
+                    {
+                        DestruirContornos();
+                    }
+                }               
             }
             else
             {
-                DestroyImmediate(contornoAtual);
-            }            
-            
-            dragCellPosicaoAtual = cellPosition;
-        }
-        
+                Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
+                Vector3 posicaoReal = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
+                GameObject auxContorno;
+                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                {
+                    if (cellPosition != dragCellPosicaoAtual)
+                    {
+                        DestroyImmediate(contornoAtual);
+                        auxContorno = createGameObject.Create(posicaoReal, this.tag);
+                        contornoAtual = auxContorno;
+                    }
+                }
+                else
+                {
+                    DestroyImmediate(contornoAtual);
+                }
+
+                dragCellPosicaoAtual = cellPosition;
+            }          
+        }        
     }
+
+    private void DestruirContornos()
+    {
+        foreach (var item in contornos.Select(x => x.Value))
+        {
+            DestroyImmediate(item);
+        }
+        contornos.Clear();
+        teste.Clear();
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
@@ -61,7 +100,17 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
         DestroyImmediate(contornoAtual);
-
+        DestruirContornos();
+        Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
+        if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+        {
+            if (eventData.pointerDrag.tag != "Untagged")
+                Destroy(eventData.pointerDrag);
+        }
+        else
+        {
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+        }
         VerificaMatriz();
     }
 
@@ -79,7 +128,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         }
         else
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = new Vector3(4, -1.2f, 1);
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
         }
     }
 
