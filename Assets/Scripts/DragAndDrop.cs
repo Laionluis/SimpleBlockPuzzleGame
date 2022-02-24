@@ -16,6 +16,8 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     private CreateGameObject createGameObject;
     private Tilemap tilemap;
     public GameObject controller;
+    public bool animar = false;
+    public int index = 0; 
     private Dictionary<int, Vector3Int> teste = new Dictionary<int, Vector3Int>();
     private Dictionary<int, GameObject> contornos = new Dictionary<int, GameObject>();
     public void OnDrag(PointerEventData eventData) 
@@ -101,16 +103,36 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         canvasGroup.alpha = 1f;
         DestroyImmediate(contornoAtual);
         DestruirContornos();
-        Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
-        if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+        if (this.tag != "Untagged")
         {
-            if (eventData.pointerDrag.tag != "Untagged")
-                Destroy(eventData.pointerDrag);
+            for (int i = 0; i < this.gameObject.transform.childCount; i++)
+            {
+                Vector3Int cellPosition = tilemap.WorldToCell(transform.GetChild(i).transform.position);
+                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                {
+                    if (eventData.pointerDrag.tag != "Untagged")
+                        Destroy(eventData.pointerDrag);
+                }
+                else
+                {
+                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                }
+            }
         }
         else
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+            Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
+            if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+            {
+                if (eventData.pointerDrag.tag != "Untagged")
+                    Destroy(eventData.pointerDrag);
+            }
+            else
+            {
+                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+            }
         }
+      
         VerificaMatriz();
     }
 
@@ -121,14 +143,32 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
 
     public void OnDrop(PointerEventData eventData)
     {
-        Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
-        if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+        if (this.tag != "Untagged")
         {
-            
+            for (int i = 0; i < this.gameObject.transform.childCount; i++)
+            {
+                Vector3Int cellPosition = tilemap.WorldToCell(transform.GetChild(i).transform.position);
+                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                {
+                   
+                }
+                else
+                {
+                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                }
+            }
         }
         else
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+            Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
+            if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+            {
+                
+            }
+            else
+            {
+                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+            }
         }
     }
 
@@ -167,9 +207,13 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     private void DestruirLinha(GameObject[,] positions, int col)
     {
         GameObject[] gameObjectsLinha = GetRow(positions, col);
+        int aux = 0;
         foreach (var item in gameObjectsLinha)
         {
-            Destroy(item);
+            item.GetComponent<DragAndDrop>().animar = true;
+            item.GetComponent<DragAndDrop>().index = aux;
+            StartCoroutine(waiter(item));
+            aux++;
         }
     }
 
@@ -180,13 +224,25 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
                 .ToArray();
     }
 
+    private GameObject auxAnimar;
     private void DestruirColuna(GameObject[,] matrix, int col)
     {
         GameObject[] gameObjectsColuna = GetColumn(matrix, col);
+        int aux = 0;
         foreach (var item in gameObjectsColuna)
         {
-            Destroy(item);
+            item.GetComponent<DragAndDrop>().animar = true;
+            item.GetComponent<DragAndDrop>().index = aux;
+            StartCoroutine(waiter(item));
+            aux++;
         }
+    }    
+
+    IEnumerator waiter(GameObject item)
+    {
+        yield return new WaitForSeconds(0.300F);
+        item.GetComponent<DragAndDrop>().animar = false;
+        Destroy(item);
     }
 
     public GameObject[] GetColumn(GameObject[,] matrix, int columnNumber)
@@ -194,5 +250,27 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         return Enumerable.Range(0, matrix.GetLength(0))
                 .Select(x => matrix[columnNumber, x])
                 .ToArray();
+    }
+
+    void Update()
+    {
+        if (animar)
+        {
+            float RotateSpeed = 0.5f;
+            float Radius = 0.1f;
+            Vector3 direcao = Vector3.left;
+            Vector2 _centre = transform.position;
+            float _angle = 0;
+            if (index % 2 == 0) //esquerda            
+                direcao = Vector3.left;
+            else //direita            
+                direcao = Vector3.right;
+
+            _angle += RotateSpeed * Time.deltaTime;
+
+            var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
+            transform.position = _centre + offset;
+            transform.Translate(direcao * 4 * Time.deltaTime);
+        }
     }
 }

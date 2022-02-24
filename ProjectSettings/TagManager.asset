@@ -7,6 +7,9 @@ TagManager:
   - Peca2
   - Peca1
   - Peca3
+  - Peca4
+  - Peca5
+  - Peca6
   layers:
   - Default
   - TransparentFX

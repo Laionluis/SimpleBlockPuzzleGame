@@ -18,6 +18,24 @@ public class BlockCell : Base, IDropHandler
             Tilemap tilemap = this.GetComponentInChildren<Tilemap>();
             if (eventData.pointerDrag.tag != "Untagged")
             {
+                for (int i = 0; i < eventData.pointerDrag.transform.childCount; i++) //loop para identificar se local que foi dropado ja esta em uso
+                {
+                    Vector3Int cellPosition = tilemap.WorldToCell(eventData.pointerDrag.transform.GetChild(i).transform.position);
+                    if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                    {
+                        if (controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] != null)
+                        {
+                            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                        return;
+                    }
+                }
+                
                 for (int i = 0; i < eventData.pointerDrag.transform.childCount; i++)
                 {
                     Vector3Int cellPosition = tilemap.WorldToCell(eventData.pointerDrag.transform.GetChild(i).transform.position);
@@ -33,13 +51,16 @@ public class BlockCell : Base, IDropHandler
                         else
                         {
                             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                            return;
                         }
                     }
                     else
                     {
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                        return;
                     }
-                }                   
+                }
+                createGameObject.CreateBlockPieces();
             }
             else
             {
