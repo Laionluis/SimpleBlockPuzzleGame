@@ -1,5 +1,4 @@
 using Assets.Scripts;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,12 +32,14 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         {
             if (this.tag != "Untagged")
             {
+   
                 for (int i = 0; i < this.gameObject.transform.childCount; i++)
                 {
                     Vector3Int cellPosition = tilemap.WorldToCell(transform.GetChild(i).transform.position);
                     Vector3 posicaoReal = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
                     
-                    if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                    if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7
+                        && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
                     {
                         var aux1 = teste.Where(x => x.Key == i).FirstOrDefault();
                         if (aux1.Value != cellPosition)
@@ -54,6 +55,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
                     else
                     {
                         DestruirContornos();
+                        return;
                     }
                 }               
             }
@@ -62,7 +64,8 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
                 Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
                 Vector3 posicaoReal = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
                 GameObject auxContorno;
-                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
+                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7
+                    && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
                 {
                     if (cellPosition != dragCellPosicaoAtual)
                     {
@@ -103,35 +106,18 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         canvasGroup.alpha = 1f;
         DestroyImmediate(contornoAtual);
         DestruirContornos();
-        if (this.tag != "Untagged")
+       
+        Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
+        if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
         {
-            for (int i = 0; i < this.gameObject.transform.childCount; i++)
-            {
-                Vector3Int cellPosition = tilemap.WorldToCell(transform.GetChild(i).transform.position);
-                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
-                {
-                    if (eventData.pointerDrag.tag != "Untagged")
-                        Destroy(eventData.pointerDrag);
-                }
-                else
-                {
-                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
-                }
-            }
+            if (eventData.pointerDrag.tag != "Untagged")
+                Destroy(eventData.pointerDrag);
         }
         else
         {
-            Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
-            if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
-            {
-                if (eventData.pointerDrag.tag != "Untagged")
-                    Destroy(eventData.pointerDrag);
-            }
-            else
-            {
-                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
-            }
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
         }
+        
       
         VerificaMatriz();
     }
@@ -143,33 +129,15 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (this.tag != "Untagged")
+        Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
+        if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
         {
-            for (int i = 0; i < this.gameObject.transform.childCount; i++)
-            {
-                Vector3Int cellPosition = tilemap.WorldToCell(transform.GetChild(i).transform.position);
-                if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
-                {
-                   
-                }
-                else
-                {
-                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
-                }
-            }
+                
         }
         else
         {
-            Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
-            if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
-            {
-                
-            }
-            else
-            {
-                eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
-            }
-        }
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+        }        
     }
 
     private void Start()
@@ -212,7 +180,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         {
             item.GetComponent<DragAndDrop>().animar = true;
             item.GetComponent<DragAndDrop>().index = aux;
-            StartCoroutine(waiter(item));
+            Destroy(item, 0.5F);
             aux++;
         }
     }
@@ -233,16 +201,10 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         {
             item.GetComponent<DragAndDrop>().animar = true;
             item.GetComponent<DragAndDrop>().index = aux;
-            StartCoroutine(waiter(item));
-            aux++;
+            Destroy(item, 0.5F);            
+            aux++;            
         }
-    }    
-
-    IEnumerator waiter(GameObject item)
-    {
-        yield return new WaitForSeconds(0.300F);
-        item.GetComponent<DragAndDrop>().animar = false;
-        Destroy(item);
+        
     }
 
     public GameObject[] GetColumn(GameObject[,] matrix, int columnNumber)
