@@ -26,12 +26,14 @@ public class BlockCell : Base, IDropHandler
                         if (controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] != null)
                         {
                             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                            eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
                             return;
                         }
                     }
                     else
                     {
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                        eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
                         return;
                     }
                 }
@@ -51,12 +53,14 @@ public class BlockCell : Base, IDropHandler
                         else
                         {
                             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                            eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
                             return;
                         }
                     }
                     else
                     {
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                        eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
                         return;
                     }
                 }
@@ -77,11 +81,13 @@ public class BlockCell : Base, IDropHandler
                     else
                     {
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                        eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
                     }
                 }
                 else
                 {
                     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+                    eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
                 }
             }           
         }

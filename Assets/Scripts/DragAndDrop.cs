@@ -8,6 +8,7 @@ using UnityEngine.Tilemaps;
 
 public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
+    private Vector3 posicaoInicialSetada;
     private CanvasGroup canvasGroup;
     private Grid grid;
     private GameObject contornoAtual;
@@ -98,6 +99,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     {
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = .6f;
+        transform.localScale = new Vector3(1, 1 , 1);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -116,6 +118,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         else
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+            eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
         }
         
       
@@ -137,6 +140,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         else
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
+            eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
         }        
     }
 

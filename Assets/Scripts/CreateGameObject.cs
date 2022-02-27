@@ -32,7 +32,8 @@ public class CreateGameObject : Base
         System.Random random = new System.Random();
         int index = random.Next(pecas.Count);
         GameObject pecaAleatoria = pecas[index];
-        GameObject gameObject = Instantiate(pecaAleatoria, posicaoInicialBloco, Quaternion.identity);         
+        GameObject gameObject = Instantiate(pecaAleatoria, posicaoInicialBloco, Quaternion.identity);
+        gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 1);
     }
 
     public GameObject CreateBlockPiecesAux()
