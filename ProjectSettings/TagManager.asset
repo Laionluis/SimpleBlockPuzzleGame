@@ -10,6 +10,8 @@ TagManager:
   - Peca4
   - Peca5
   - Peca6
+  - RecordText
+  - ScoreText
   layers:
   - Default
   - TransparentFX

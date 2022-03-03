@@ -8,7 +8,7 @@ using UnityEngine.Tilemaps;
 
 public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
-    private Vector3 posicaoInicialSetada;
+    public Vector3 posicaoInicialSetada;
     private CanvasGroup canvasGroup;
     private Grid grid;
     private GameObject contornoAtual;
@@ -17,6 +17,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     private Tilemap tilemap;
     public GameObject controller;
     public bool animar = false;
+    public bool animarIrPosicaoInicial = false;
     public int index = 0; 
     private Dictionary<int, Vector3Int> teste = new Dictionary<int, Vector3Int>();
     private Dictionary<int, GameObject> contornos = new Dictionary<int, GameObject>();
@@ -97,9 +98,13 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        animarIrPosicaoInicial = false;
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = .6f;
-        transform.localScale = new Vector3(1, 1 , 1);
+        if (eventData.pointerDrag.tag != "Untagged")
+            transform.localScale = new Vector3(1, 1 , 1);
+        else
+            transform.localScale = new Vector3(2.6f, 2.6f, 1);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -108,7 +113,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         canvasGroup.alpha = 1f;
         DestroyImmediate(contornoAtual);
         DestruirContornos();
-       
+        
         Vector3Int cellPosition = tilemap.WorldToCell(transform.position);
         if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
         {
@@ -117,8 +122,11 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         }
         else
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
-            eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value == eventData.pointerDrag).Select(y => y.Key).FirstOrDefault(); ;
+            if(eventData.pointerDrag.tag != "Untagged")
+                eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            else
+                eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(1.5f, 1.5f, 1);
         }
         
       
@@ -139,8 +147,11 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         }
         else
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = posicaoInicialBloco;
-            eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value == eventData.pointerDrag).Select(y => y.Key).FirstOrDefault(); ;
+            if (eventData.pointerDrag.tag != "Untagged")
+                eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            else
+                eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(1.5f, 1.5f, 1);
         }        
     }
 
@@ -237,6 +248,10 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
             var offset = new Vector2(Mathf.Sin(_angle), Mathf.Cos(_angle)) * Radius;
             transform.position = _centre + offset;
             transform.Translate(direcao * 4 * Time.deltaTime);
+        }
+        if (animarIrPosicaoInicial)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, posicaoInicialSetada, 10f * Time.deltaTime);
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Assets.Scripts
 {
@@ -10,6 +12,6 @@ namespace Assets.Scripts
         public Vector3 posicaoInicialBloco2 = new Vector3(2.46f, -1.86f, 1);
         public Vector3 posicaoInicialBloco3 = new Vector3(4.13f, -1.86f, 1);
 
-
+        
     }
 }
