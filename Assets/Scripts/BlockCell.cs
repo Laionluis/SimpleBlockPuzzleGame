@@ -6,12 +6,12 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
-using UnityEngine.UI;
+
 
 public class BlockCell : Base, IDropHandler
 {
     public GameObject controller;
-    public Text scoreText;
+    public Score scoreText;
     private CreateGameObject createGameObject;
     public void OnDrop(PointerEventData eventData)
     {
@@ -51,7 +51,7 @@ public class BlockCell : Base, IDropHandler
                             GameObject objetoQueFicaNoTabuleiro = createGameObject.CreateBlockPiecesAux();
                             objetoQueFicaNoTabuleiro.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;                            
                             controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] = objetoQueFicaNoTabuleiro;
-                            Pontuar10();
+                            
                         }
                         else
                         {
@@ -67,6 +67,7 @@ public class BlockCell : Base, IDropHandler
                         return;
                     }
                 }
+                scoreText.Pontuar(eventData.pointerDrag.transform.childCount);
                 var key = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value.name == eventData.pointerDrag.name).Select(y => y.Key).FirstOrDefault();       
                 controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Remove(key);
                 VerificaSePrecisaNovasPecas();
@@ -84,7 +85,7 @@ public class BlockCell : Base, IDropHandler
                         VerificaSePrecisaNovasPecas();                        
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
                         controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] = eventData.pointerDrag;
-                        Pontuar10();
+                        scoreText.Pontuar(1);
                     }
                     else
                     {
@@ -101,41 +102,9 @@ public class BlockCell : Base, IDropHandler
         }
     }
 
-    private Coroutine CountingCoroutine;
-    public int CountFPS = 30;
-    public float Duration = 1f;
-    private IEnumerator CountText(int newValue)
-    {
-        WaitForSeconds Wait = new WaitForSeconds(1f / CountFPS);
+   
 
-        int previousValue = int.Parse(scoreText.text);
-        int stepAmount;        
-        
-        stepAmount = Mathf.CeilToInt((newValue - previousValue) / (CountFPS * Duration)); // newValue = 20, previousValue = 0. CountFPS = 30, and Duration = 1; (20 - 0) / (30*1) // 0.66667 (floortoint)-> 0
-        
-      
-        while (previousValue < newValue)
-        {
-            previousValue += stepAmount;
-            if (previousValue > newValue)
-            {
-                previousValue = newValue;
-            }
-
-            scoreText.text = previousValue.ToString();
-
-            yield return Wait;
-        }
-       
-    }
-
-    private void Pontuar10()
-    {
-       
-        int antes = int.Parse(scoreText.text);
-        CountingCoroutine = StartCoroutine(CountText(antes + 10));
-
-    }
+  
 
     private void VerificaSePrecisaNovasPecas()
     {
@@ -147,7 +116,7 @@ public class BlockCell : Base, IDropHandler
     {
         controller = GameObject.FindGameObjectWithTag("GameController");
         createGameObject = Tree.FindObjectOfType<CreateGameObject>();
-        scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Text>();
+        scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
     }
 
 }

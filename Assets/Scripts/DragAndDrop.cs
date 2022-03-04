@@ -21,6 +21,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     public int index = 0; 
     private Dictionary<int, Vector3Int> teste = new Dictionary<int, Vector3Int>();
     private Dictionary<int, GameObject> contornos = new Dictionary<int, GameObject>();
+    public Score scoreText;
     public void OnDrag(PointerEventData eventData) 
     {
         //Create a ray going from the camera through the mouse position
@@ -161,6 +162,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         controller = GameObject.FindGameObjectWithTag("GameController");
         tilemap = Tree.FindObjectOfType<Tilemap>();
         createGameObject = Tree.FindObjectOfType<CreateGameObject>();
+        scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
     }
 
     private void VerificaMatriz()
@@ -198,6 +200,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
             Destroy(item, 0.5F);
             aux++;
         }
+        scoreText.Pontuar(10);
     }
 
     private GameObject[] GetRow(GameObject[,] matrix, int col)
@@ -219,7 +222,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
             Destroy(item, 0.5F);            
             aux++;            
         }
-        
+        scoreText.Pontuar(10);
     }
 
     public GameObject[] GetColumn(GameObject[,] matrix, int columnNumber)
