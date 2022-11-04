@@ -28,15 +28,15 @@ RectTransform:
   m_GameObject: {fileID: 1960725405272718000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6299999, y: 2.6299999, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 1960725406504164278}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5919911, y: -0.28872043}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: 0.5582, y: -0.2969}
+  m_SizeDelta: {x: 0.211, y: 0.2137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1960725405272718004
 SpriteRenderer:
@@ -128,9 +128,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicaoInicialBloco: {x: 4, y: -2, z: 1}
+  posicaoInicialBloco1: {x: 0.79, y: -1.86, z: 1}
+  posicaoInicialBloco2: {x: 2.46, y: -1.86, z: 1}
+  posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
+  posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
   animar: 0
+  animarIrPosicaoInicial: 0
   index: 0
+  scoreText: {fileID: 0}
 --- !u!1 &1960725405334879120
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,15 +165,15 @@ RectTransform:
   m_GameObject: {fileID: 1960725405334879120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6299999, y: 2.6299999, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 1960725406504164278}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.007, y: -0.28872043}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: -0.0442, y: -0.2969}
+  m_SizeDelta: {x: 0.211, y: 0.2137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1960725405334879124
 SpriteRenderer:
@@ -259,9 +265,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicaoInicialBloco: {x: 4, y: -2, z: 1}
+  posicaoInicialBloco1: {x: 0.79, y: -1.86, z: 1}
+  posicaoInicialBloco2: {x: 2.46, y: -1.86, z: 1}
+  posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
+  posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
   animar: 0
+  animarIrPosicaoInicial: 0
   index: 0
+  scoreText: {fileID: 0}
 --- !u!1 &1960725405660266949
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,15 +302,15 @@ RectTransform:
   m_GameObject: {fileID: 1960725405660266949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6299999, y: 2.6299999, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 1960725406504164278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00699991, y: 0.307}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: -0.0442, y: 0.304}
+  m_SizeDelta: {x: 0.211, y: 0.2137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1960725405660266953
 SpriteRenderer:
@@ -390,9 +402,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicaoInicialBloco: {x: 4, y: -2, z: 1}
+  posicaoInicialBloco1: {x: 0.79, y: -1.86, z: 1}
+  posicaoInicialBloco2: {x: 2.46, y: -1.86, z: 1}
+  posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
+  posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
   animar: 0
+  animarIrPosicaoInicial: 0
   index: 0
+  scoreText: {fileID: 0}
 --- !u!1 &1960725406504164276
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +425,7 @@ GameObject:
   - component: {fileID: 1960725406504164281}
   m_Layer: 0
   m_Name: Peca13
-  m_TagString: Peca3
+  m_TagString: Peca13
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -448,7 +466,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.04572624, y: 0.005715698}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -459,7 +477,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.795469, y: 1.1774788}
+  m_Size: {x: 1.7842737, y: 1.1857054}
   m_EdgeRadius: 0
 --- !u!225 &1960725406504164280
 CanvasGroup:
@@ -486,9 +504,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicaoInicialBloco: {x: 4, y: -2, z: 1}
+  posicaoInicialBloco1: {x: 0.79, y: -1.86, z: 1}
+  posicaoInicialBloco2: {x: 2.46, y: -1.86, z: 1}
+  posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
+  posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
   animar: 0
+  animarIrPosicaoInicial: 0
   index: 0
+  scoreText: {fileID: 0}
 --- !u!1 &4722437882736394346
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,15 +541,15 @@ RectTransform:
   m_GameObject: {fileID: 4722437882736394346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.6299999, y: 2.6299999, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 1960725406504164278}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.6079999, y: -0.28872043}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: -0.6486, y: -0.2969}
+  m_SizeDelta: {x: 0.211, y: 0.2137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1201735577546945677
 SpriteRenderer:
@@ -617,6 +641,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicaoInicialBloco: {x: 4, y: -2, z: 1}
+  posicaoInicialBloco1: {x: 0.79, y: -1.86, z: 1}
+  posicaoInicialBloco2: {x: 2.46, y: -1.86, z: 1}
+  posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
+  posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
   animar: 0
+  animarIrPosicaoInicial: 0
   index: 0
+  scoreText: {fileID: 0}

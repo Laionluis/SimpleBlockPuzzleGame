@@ -34,8 +34,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         if (tilemap != null && createGameObject != null)
         {
             if (this.tag != "Untagged")
-            {
-   
+            {   
                 for (int i = 0; i < this.gameObject.transform.childCount; i++)
                 {
                     Vector3Int cellPosition = tilemap.WorldToCell(transform.GetChild(i).transform.position);
@@ -43,7 +42,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
                     
                     if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7
                         && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
-                    {
+                    {                        
                         var aux1 = teste.Where(x => x.Key == i).FirstOrDefault();
                         if (aux1.Value != cellPosition)
                         {
@@ -132,6 +131,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         
       
         VerificaMatriz();
+        VerificarGameOver();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -193,6 +193,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     {
         GameObject[] gameObjectsLinha = GetRow(positions, col);
         int aux = 0;
+        scoreText.Pontuar(10, null);
         foreach (var item in gameObjectsLinha)
         {
             item.GetComponent<DragAndDrop>().animar = true;
@@ -200,7 +201,6 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
             Destroy(item, 0.5F);
             aux++;
         }
-        scoreText.Pontuar(10);
     }
 
     private GameObject[] GetRow(GameObject[,] matrix, int col)
@@ -215,6 +215,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     {
         GameObject[] gameObjectsColuna = GetColumn(matrix, col);
         int aux = 0;
+        scoreText.Pontuar(10, null);
         foreach (var item in gameObjectsColuna)
         {
             item.GetComponent<DragAndDrop>().animar = true;
@@ -222,7 +223,6 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
             Destroy(item, 0.5F);            
             aux++;            
         }
-        scoreText.Pontuar(10);
     }
 
     public GameObject[] GetColumn(GameObject[,] matrix, int columnNumber)
@@ -256,5 +256,273 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         {
             transform.position = Vector3.MoveTowards(transform.position, posicaoInicialSetada, 10f * Time.deltaTime);
         }
+    }
+
+
+    private void VerificarGameOver()
+    {
+        //loop entre as 3 peças ali que aparece para selcionar
+        int verificacao = 0;
+        foreach (var peca in controller.GetComponent<CreateGameObject>().vetorPosicaoInicial)
+        {
+            if (!VerificarSePecaConsegueEntrar(peca.Value))
+                verificacao++;
+        }
+        if (controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Count == verificacao)
+        {
+            //game over
+            Debug.Log("ACABOU");
+        }
+    }
+
+    private bool VerificarSePecaConsegueEntrar(GameObject value)
+    {
+        GameObject[,] positions = controller.GetComponent<CreateGameObject>().positions;
+
+        if (value.tag == "Untagged")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (positions[col, row] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca2")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 7) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (positions[col, row] == null && positions[col + 1, row] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca3")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 7) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row] == null && positions[col, row + 1] == null && positions[col + 1, row] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca4")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row] == null && positions[col, row + 1] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca5")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 6) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (positions[col, row] == null && positions[col + 1, row] == null && positions[col + 2, row] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca6")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 7) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row] == null && positions[col + 1, row] == null && positions[col, row + 1] == null && positions[col + 1, row + 1] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca7")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 7) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row] == null && positions[col, row + 1] == null && positions[col + 1, row + 1] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca8")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 6) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row] == null && positions[col + 1, row] == null && positions[col + 2, row] == null && positions[col + 1, row + 1] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca9")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 4) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (positions[col, row] == null && positions[col + 1, row] == null && positions[col + 2, row] == null && positions[col + 3, row] == null && positions[col + 4, row] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca10")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 5) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (positions[col, row] == null && positions[col + 1, row] == null && positions[col + 2, row] == null && positions[col + 3, row] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca11")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 6) break;
+                    if (positions[col, row] == null && positions[col, row + 1] == null && positions[col, row + 2] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca12")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 7) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 6) break;
+                    if (positions[col, row + 1] == null && positions[col + 1, row] == null && positions[col + 1, row + 1] == null && positions[col + 1, row + 2] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca13")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 6) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row + 1] == null && positions[col + 1, row] == null && positions[col + 1, row + 1] == null && positions[col + 2, row + 1] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca14")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 5) break;
+                    if (positions[col, row] == null && positions[col, row + 1] == null && positions[col, row + 2] == null && positions[col, row + 3] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca15")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 4) break;
+                    if (positions[col, row] == null && positions[col, row + 1] == null && positions[col, row + 2] == null && positions[col, row + 3] == null & positions[col, row + 4] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca16")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 7) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row] == null && positions[col + 1, row] == null && positions[col + 1, row + 1] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca17")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 7) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 7) break;
+                    if (positions[col, row + 1] == null && positions[col + 1, row] == null && positions[col + 1, row + 1] == null)
+                        return true;
+                }
+            }
+        }
+
+        if (value.tag == "Peca18")
+        {
+            for (int col = 0; col < positions.GetLength(0); col++)
+            {
+                if (col == 6) return false;
+                for (int row = 0; row < positions.GetLength(1); row++)
+                {
+                    if (row == 6) break;
+                    if (positions[col, row] == null && positions[col + 1, row] == null && positions[col + 2, row] == null &&
+                        positions[col, row + 1] == null && positions[col + 1, row + 1] == null && positions[col + 2, row + 1] == null &&
+                        positions[col, row + 2] == null && positions[col + 1, row + 2] == null && positions[col + 2, row + 2] == null)
+                        return true;
+                }
+            }
+        }
+
+        return false;
     }
 }

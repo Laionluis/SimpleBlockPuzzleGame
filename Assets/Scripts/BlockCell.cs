@@ -39,19 +39,19 @@ public class BlockCell : Base, IDropHandler
                         return;
                     }
                 }
-                
+
                 for (int i = 0; i < eventData.pointerDrag.transform.childCount; i++)
                 {
                     Vector3Int cellPosition = tilemap.WorldToCell(eventData.pointerDrag.transform.GetChild(i).transform.position);
-                    
+
                     if (cellPosition.x >= 0 && cellPosition.x <= 7 && cellPosition.y >= 0 && cellPosition.y <= 7)
                     {
                         if (createGameObject != null && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
                         {
                             GameObject objetoQueFicaNoTabuleiro = createGameObject.CreateBlockPiecesAux();
-                            objetoQueFicaNoTabuleiro.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;                            
+                            objetoQueFicaNoTabuleiro.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
                             controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] = objetoQueFicaNoTabuleiro;
-                            
+
                         }
                         else
                         {
@@ -67,8 +67,8 @@ public class BlockCell : Base, IDropHandler
                         return;
                     }
                 }
-                scoreText.Pontuar(eventData.pointerDrag.transform.childCount);
-                var key = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value.name == eventData.pointerDrag.name).Select(y => y.Key).FirstOrDefault();       
+                scoreText.Pontuar(eventData.pointerDrag.transform.childCount, eventData.pointerDrag.transform.GetChild(0).transform.position);
+                var key = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value.name == eventData.pointerDrag.name).Select(y => y.Key).FirstOrDefault();
                 controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Remove(key);
                 VerificaSePrecisaNovasPecas();
             }
@@ -80,12 +80,12 @@ public class BlockCell : Base, IDropHandler
                 {
                     if (createGameObject != null && controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] == null)
                     {
-                        var key = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value == eventData.pointerDrag).Select(y => y.Key).FirstOrDefault();                        
+                        var key = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value == eventData.pointerDrag).Select(y => y.Key).FirstOrDefault();
                         controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Remove(key);
-                        VerificaSePrecisaNovasPecas();                        
+                        VerificaSePrecisaNovasPecas();
                         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = tilemap.CellToWorld(cellPosition) + new Vector3(.57f, .57f, 1) * .5f;
                         controller.GetComponent<CreateGameObject>().positions[cellPosition.x, cellPosition.y] = eventData.pointerDrag;
-                        scoreText.Pontuar(1);
+                        scoreText.Pontuar(1, eventData.pointerDrag.transform.position);
                     }
                     else
                     {
@@ -98,18 +98,14 @@ public class BlockCell : Base, IDropHandler
                     eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Where(x => x.Value == eventData.pointerDrag).Select(y => y.Key).FirstOrDefault(); ;
                     eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(1.5f, 1.5f, 1);
                 }
-            }           
+            }
         }
     }
 
-   
-
-  
-
     private void VerificaSePrecisaNovasPecas()
     {
-        if(controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Count == 0)
-            createGameObject.CreateBlockPieces(null);
+        if (controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Count == 0)
+            createGameObject.CreateBlockPieces(null);        
     }
 
     private void Start()
@@ -119,4 +115,8 @@ public class BlockCell : Base, IDropHandler
         scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
     }
 
+    void Update()
+    {
+
+    }
 }

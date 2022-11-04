@@ -55,8 +55,7 @@ public class CreateGameObject : Base
             gameObject.GetComponent<DragAndDrop>().posicaoInicialSetada = posaux;
 
             vetorPosicaoInicial.Add(posaux, gameObject);
-        }
-        
+        }        
     }
 
     public GameObject CreateBlockPiecesAux()

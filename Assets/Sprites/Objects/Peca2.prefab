@@ -27,15 +27,15 @@ RectTransform:
   m_GameObject: {fileID: 6981968861742933095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.63, y: 2.63, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 6981968863433009455}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.286, y: 0}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.292, y: 0}
+  m_SizeDelta: {x: -0.000000014901161, y: -0.000000014901161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &6981968861742933115
 SpriteRenderer:
@@ -141,15 +141,15 @@ RectTransform:
   m_GameObject: {fileID: 6981968862086314129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.63, y: 2.63, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 6981968863433009455}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.313, y: 0}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.31, y: 0}
+  m_SizeDelta: {x: -0.000000014901161, y: -0.000000014901161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &6981968862086314133
 SpriteRenderer:
@@ -265,7 +265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8, y: -2.06}
+  m_AnchoredPosition: {x: 1.678, y: -2.095}
   m_SizeDelta: {x: 0.22, y: 0.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &6981968863433009452
@@ -281,7 +281,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009530067, y: 0}
+  m_Offset: {x: 0.014338851, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -292,7 +292,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2050385, y: 0.596189}
+  m_Size: {x: 1.2011468, y: 0.596189}
   m_EdgeRadius: 0
 --- !u!225 &6981968863433009453
 CanvasGroup:
@@ -319,4 +319,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicaoInicialBloco: {x: 4, y: -2, z: 1}
+  posicaoInicialBloco1: {x: 0.79, y: -1.86, z: 1}
+  posicaoInicialBloco2: {x: 2.46, y: -1.86, z: 1}
+  posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
+  posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
+  animar: 0
+  animarIrPosicaoInicial: 0
+  index: 0
+  scoreText: {fileID: 0}

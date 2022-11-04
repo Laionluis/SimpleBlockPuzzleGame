@@ -27,15 +27,15 @@ RectTransform:
   m_GameObject: {fileID: 118201660326530951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.63, y: 2.63, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 9201745911578273540}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.192, y: 0}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: 1.216, y: 0.008}
+  m_SizeDelta: {x: 0.2117, y: 0.2264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &118201660326530948
 SpriteRenderer:
@@ -141,15 +141,15 @@ RectTransform:
   m_GameObject: {fileID: 118201660418189557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.63, y: 2.63, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 9201745911578273540}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.58899987, y: 0}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: 0.619, y: 0.0083}
+  m_SizeDelta: {x: 0.2117, y: 0.2264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &118201660418189554
 SpriteRenderer:
@@ -255,15 +255,15 @@ RectTransform:
   m_GameObject: {fileID: 2258489892252126603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.63, y: 2.63, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 9201745911578273540}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.008000135, y: 0}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: 0.0244, y: 0.0083}
+  m_SizeDelta: {x: 0.2117, y: 0.2264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &2258489892252126600
 SpriteRenderer:
@@ -369,15 +369,15 @@ RectTransform:
   m_GameObject: {fileID: 9201745910247962298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.63, y: 2.63, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 9201745911578273540}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.6100002, y: 0}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: -0.575, y: 0.008}
+  m_SizeDelta: {x: 0.2117, y: 0.2264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &9201745910247962302
 SpriteRenderer:
@@ -483,15 +483,15 @@ RectTransform:
   m_GameObject: {fileID: 9201745910852430412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.63, y: 2.63, z: 1}
+  m_LocalScale: {x: 2.58, y: 2.58, z: 1}
   m_Children: []
   m_Father: {fileID: 9201745911578273540}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2130002, y: 0}
-  m_SizeDelta: {x: 0.22, y: 0.22}
+  m_AnchoredPosition: {x: -1.175, y: 0.008}
+  m_SizeDelta: {x: 0.2117, y: 0.2264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &9201745910852430416
 SpriteRenderer:
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 9201745911578273537}
   m_Layer: 0
   m_Name: Peca15
-  m_TagString: Peca5
+  m_TagString: Peca15
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -626,7 +626,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.034374, y: 0.01289022}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -637,7 +637,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9979186, y: 0.596189}
+  m_Size: {x: 3.0151057, y: 0.5704086}
   m_EdgeRadius: 0
 --- !u!225 &9201745911578273542
 CanvasGroup:
@@ -664,6 +664,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posicaoInicialBloco: {x: 4, y: -2, z: 1}
+  posicaoInicialBloco1: {x: 0.79, y: -1.86, z: 1}
+  posicaoInicialBloco2: {x: 2.46, y: -1.86, z: 1}
+  posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
+  posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
   animar: 0
+  animarIrPosicaoInicial: 0
   index: 0
+  scoreText: {fileID: 0}
