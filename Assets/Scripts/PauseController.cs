@@ -10,10 +10,29 @@ public class PauseController : MonoBehaviour
 
     public GameObject botaoPause;
 
+    public GameObject gameOverPainel;
+
+    public GameObject botaoPlay;
+
+    public bool gameOver;
+
     public void PauseGame()
     {
-        pausePanel.SetActive(true);
-        botaoPause.SetActive(false);
+        if (gameOver)
+        {
+            pausePanel.SetActive(true);
+            botaoPause.SetActive(false);
+            botaoPlay.SetActive(false);
+            gameOverPainel.SetActive(true);
+        }
+        else
+        {
+            pausePanel.SetActive(true);
+            botaoPlay.SetActive(true);
+            botaoPause.SetActive(false);
+            gameOverPainel.SetActive(false);
+        }
+      
     }
     public void ResumeGame()
     {

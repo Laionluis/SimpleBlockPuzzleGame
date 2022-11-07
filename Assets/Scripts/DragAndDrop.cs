@@ -16,6 +16,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
     private CreateGameObject createGameObject;
     private Tilemap tilemap;
     public GameObject controller;
+    public GameObject Pausecontroller;
     public bool animar = false;
     public bool animarIrPosicaoInicial = false;
     public int index = 0; 
@@ -163,6 +164,10 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         tilemap = Tree.FindObjectOfType<Tilemap>();
         createGameObject = Tree.FindObjectOfType<CreateGameObject>();
         scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
+        Pausecontroller = GameObject.FindGameObjectWithTag("PauseController");
+
+        var mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
     }
 
     private void VerificaMatriz()
@@ -271,7 +276,8 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         if (controller.GetComponent<CreateGameObject>().vetorPosicaoInicial.Count == verificacao)
         {
             //game over
-            Debug.Log("ACABOU");
+            Pausecontroller.GetComponent<PauseController>().gameOver = true;
+            Pausecontroller.GetComponent<PauseController>().PauseGame();
         }
     }
 
