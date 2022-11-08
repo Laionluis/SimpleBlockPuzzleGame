@@ -25,6 +25,7 @@ TagManager:
   - Peca17
   - Peca18
   - PauseController
+  - Grid
   layers:
   - Default
   - TransparentFX

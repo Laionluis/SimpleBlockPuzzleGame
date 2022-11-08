@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class PauseController : MonoBehaviour
 
     public GameObject botaoPlay;
 
+    public Record RecordText;
+
     public bool gameOver;
 
     public void PauseGame()
@@ -24,6 +27,8 @@ public class PauseController : MonoBehaviour
             botaoPause.SetActive(false);
             botaoPlay.SetActive(false);
             gameOverPainel.SetActive(true);
+
+            RecordText.SalvarRecord();
         }
         else
         {
@@ -34,6 +39,7 @@ public class PauseController : MonoBehaviour
         }
       
     }
+
     public void ResumeGame()
     {
         pausePanel.SetActive(false);
@@ -47,7 +53,7 @@ public class PauseController : MonoBehaviour
 
     void Start()
     {
-        
+        RecordText = GameObject.FindGameObjectWithTag("RecordText").GetComponent<Record>();
     }
 
     // Update is called once per frame

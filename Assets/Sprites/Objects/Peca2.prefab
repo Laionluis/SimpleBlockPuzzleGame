@@ -281,7 +281,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014338851, y: 0}
+  m_Offset: {x: 0.0057466626, y: 0.0015889406}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -292,7 +292,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2011468, y: 0.596189}
+  m_Size: {x: 1.1884669, y: 0.580426}
   m_EdgeRadius: 0
 --- !u!225 &6981968863433009453
 CanvasGroup:
@@ -324,6 +324,7 @@ MonoBehaviour:
   posicaoInicialBloco3: {x: 4.13, y: -1.86, z: 1}
   posicaoInicialSetada: {x: 0, y: 0, z: 0}
   controller: {fileID: 0}
+  Pausecontroller: {fileID: 0}
   animar: 0
   animarIrPosicaoInicial: 0
   index: 0

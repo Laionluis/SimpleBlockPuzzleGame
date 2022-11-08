@@ -10,7 +10,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
 {
     public Vector3 posicaoInicialSetada;
     private CanvasGroup canvasGroup;
-    private Grid grid;
+    public GameObject grid;
     private GameObject contornoAtual;
     private Vector3Int dragCellPosicaoAtual;
     private CreateGameObject createGameObject;
@@ -28,7 +28,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         //Create a ray going from the camera through the mouse position
         Ray ray = Camera.main.ScreenPointToRay(eventData.position);
         //Calculate the distance between the Camera and the GameObject, and go this distance along the ray
-        Vector3 rayPoint = ray.GetPoint(Vector3.Distance(transform.position, Camera.main.transform.position)) + new Vector3(0, 1, 0);
+        Vector3 rayPoint = ray.GetPoint(Vector3.Distance(transform.position, Camera.main.transform.position)) + new Vector3(0, 2, 0);
         //Move the GameObject when you drag it
         rayPoint.z = 50;
         transform.position = rayPoint;
@@ -106,6 +106,8 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
             transform.localScale = new Vector3(1, 1 , 1);
         else
             transform.localScale = new Vector3(2.6f, 2.6f, 1);
+
+        grid.GetComponent<BoxCollider2D>().size = new Vector2(5f, 10f); 
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -129,8 +131,8 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
             else
                 eventData.pointerDrag.GetComponent<RectTransform>().transform.localScale = new Vector3(1.5f, 1.5f, 1);
         }
-        
-      
+
+        grid.GetComponent<BoxCollider2D>().size = new Vector2(5f, 5f);
         VerificaMatriz();
         VerificarGameOver();
     }
@@ -165,9 +167,7 @@ public class DragAndDrop : Base, IPointerDownHandler, IBeginDragHandler, IEndDra
         createGameObject = Tree.FindObjectOfType<CreateGameObject>();
         scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
         Pausecontroller = GameObject.FindGameObjectWithTag("PauseController");
-
-        var mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
+        grid = GameObject.FindGameObjectWithTag("Grid");
     }
 
     private void VerificaMatriz()
