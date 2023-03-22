@@ -72,12 +72,4 @@ public class CreateGameObject : Base
         gameObject.AddComponent<BoxCollider2D>();
         return gameObject;
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 }

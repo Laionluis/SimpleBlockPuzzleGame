@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,32 +32,6 @@ public class Score : MonoBehaviour
             text.transform.GetComponent<TextMeshPro>().SetText(soma.ToString());
             fadeStartTime = Time.time;
         }        
-    }
-
-    public int CountFPS = 30;
-    public float Duration = 1f;
-    private IEnumerator CountText(int newValue)
-    {
-        yield return new WaitForSeconds(1f / CountFPS);
-
-        //int previousValue = int.Parse(scoreText.text);
-        //int stepAmount;
-
-        //stepAmount = Mathf.CeilToInt((newValue - previousValue) / (CountFPS * Duration)); // newValue = 20, previousValue = 0. CountFPS = 30, and Duration = 1; (20 - 0) / (30*1) // 0.66667 (floortoint)-> 0
-
-        //while (previousValue < newValue)
-        //{
-        //    previousValue += stepAmount;
-        //    if (previousValue > newValue)
-        //    {
-        //        previousValue = newValue;
-        //    }
-
-        //    scoreText.text = previousValue.ToString();
-
-        //    yield return Wait;            
-        //}
-        //score = 0;
     }
 
     void Start()

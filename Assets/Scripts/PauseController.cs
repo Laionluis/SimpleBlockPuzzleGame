@@ -55,10 +55,4 @@ public class PauseController : MonoBehaviour
     {
         RecordText = GameObject.FindGameObjectWithTag("RecordText").GetComponent<Record>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

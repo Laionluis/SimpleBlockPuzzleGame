@@ -114,9 +114,4 @@ public class BlockCell : Base, IDropHandler
         createGameObject = Tree.FindObjectOfType<CreateGameObject>();
         scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<Score>();
     }
-
-    void Update()
-    {
-
-    }
 }

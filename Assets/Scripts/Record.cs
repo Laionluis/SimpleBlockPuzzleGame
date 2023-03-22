@@ -27,10 +27,4 @@ public class Record : MonoBehaviour
         int recordatual = PlayerPrefs.GetInt("Record");
         recordText.text = recordatual.ToString();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
